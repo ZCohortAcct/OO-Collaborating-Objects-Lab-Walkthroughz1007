@@ -8,6 +8,7 @@ describe 'Artist' do
   describe '#initialize with #name' do
     it 'accepts a name for the artist' do
       artist = Artist.new('Michael Jackson')
+      # binding.pry
       expect(artist.name).to eq('Michael Jackson')
     end
   end
@@ -35,7 +36,7 @@ describe 'Artist' do
       dirty_diana = Song.new("Dirty Diana")
       billie_jean = Song.new("Billie Jean")
       piano_man = Song.new("Piano Man")
-      dirty_diana.artist = artist
+      dirty_diana.artist= artist
       billie_jean.artist = artist
       expect(artist.songs).to eq([dirty_diana, billie_jean])
     end
